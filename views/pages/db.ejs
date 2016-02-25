@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+
+<head>
+    <% include ../partials/header.ejs %>
+</head>
+
+<body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+<div class="wrapper">
+
+<% include ../partials/nav.ejs %>
+
+<aside>
+    <div class="aside-content">
+        <h2 class="lang-toggle"><span class="eng-toggle fadeInUp">Learn Hanja comfortably</span>&nbsp;|&nbsp;<span class="krn">漢字 便하게 배우기</span></h2>
+        <p>An English-language online resource on learning Chinese characters in Korean (Hanja). For all Korean learners. Get started at our 
+            <a class="linkstyle" href="#">introductory level</a>. No prior knowledge of Chinese characters necessary; we start from the very basics.</p>
+        <p align="right"><a href="#"><i><span class="red-highlight">"... Why learn Hanja?" and more about this website.</span></i></a></p>
+    </div>
+</aside>
+
+<div id="front-main">
+
+    <h2>Database Results</h2>
+    <% results.forEach(function(r) { %>
+        <li><%= r.id %> - <%= r.name %></li>
+    <% }); %>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
