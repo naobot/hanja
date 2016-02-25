@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
                 res.send("Error " + err);
             }
             else {
-                response.render('pages/db', { results: result.rows });
+                res.render('pages/db', { results: result.rows });
             }
         });
     });
