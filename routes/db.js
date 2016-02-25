@@ -4,7 +4,6 @@ var pg = require('pg');
 
 /* GET characters database */
 router.get('/', function(req, res, next) {
-    res.send("DATABASE_URL: " + process.env.DATABASE_URL);
     pg.connect(process.env.DATABASE_URL, function(err, client, done) {
         client.query('SELECT * FROM char_table', function(err, result) {
             done();
